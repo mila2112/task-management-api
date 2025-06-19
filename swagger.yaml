@@ -1,0 +1,24 @@
+openapi: 3.0.0
+info:
+  title: Task Management API
+  version: 1.0.0
+paths:
+  /tasks:
+    get:
+      summary: Get all tasks
+      parameters:
+        - name: status
+          in: query
+          schema:
+            type: string
+        - name: page
+          in: query
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          schema:
+            type: integer
+      responses:
+        200:
+          description: List of tasks
